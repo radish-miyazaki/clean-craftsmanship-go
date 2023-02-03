@@ -27,7 +27,7 @@ func TestPop(t *testing.T) {
 			expected: []int{88},
 		},
 		{
-			name:     "pop stack with 99 and 88, will return 88 and 99",
+			name:     "pop stack with 99 and 88, will return 88 and 99 (FILO)",
 			stack:    *NewStack([]int{99, 88}),
 			count:    2,
 			expected: []int{88, 99},
