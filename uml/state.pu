@@ -1,0 +1,14 @@
+@startuml
+hide empty description
+left to right direction
+
+[*] -up-> ロック
+[*] <-down- ロック
+アラーム中 --> ロック : リセット
+アラーム中 <-- ロック : 通過
+アンロック --> ロック : 通過
+アンロック <-- ロック : 乗車券
+アンロック -up-> 返却中 : 乗車券
+アンロック <-down- 返却中 : 返却
+
+@enduml
