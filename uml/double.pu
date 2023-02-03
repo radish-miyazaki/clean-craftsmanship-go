@@ -1,0 +1,16 @@
+@startuml
+node モック
+node スパイ
+node スタブ
+node ダミー
+cloud テストダブル
+node フェイク
+
+
+モック -up-> スパイ
+スパイ -up-> スタブ
+スタブ -up-> ダミー
+ダミー -up-> テストダブル
+フェイク -up-> テストダブル
+
+@enduml
