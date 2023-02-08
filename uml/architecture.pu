@@ -1,0 +1,34 @@
+@startuml
+package GUI {
+  node Controller
+  node PresenterIMPL
+  node View
+}
+
+package Interact {
+  node Interactor
+  node Gateway
+  node Presenter
+}
+
+package DB {
+  node GatewayIMPL
+  node ORM
+  node Database
+}
+
+package B.O. {
+  node BusinessObject
+}
+
+Controller --> Interactor
+Interactor -right-> BusinessObject
+Interactor --> Presenter
+Interactor --> Gateway
+PresenterIMPL -left-> Presenter
+PresenterIMPL --> View
+GatewayIMPL -up-> Gateway
+GatewayIMPL --> ORM
+GatewayIMPL --> Database
+
+@enduml
