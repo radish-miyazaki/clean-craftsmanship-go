@@ -1,0 +1,19 @@
+@startuml
+
+left to right direction
+
+class XRay {
+  +turn_on()
+  +align()
+}
+
+class SafeXRay extends XRay {
+  +turn_on()
+}
+
+class XRayTest
+
+XRayTest --> XRay
+XRayTest -[dashed]-> SafeXRay : create
+
+@enduml
