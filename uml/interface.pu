@@ -1,0 +1,21 @@
+@startuml
+
+left to right direction
+
+node αTest
+node α
+node α1
+node α2
+node α3
+node α4
+node α5
+
+αTest --> α
+α --> α1
+α1 --> α2
+α1 --> α4
+α2 --> α3
+α3 --> α5
+α3 --> α4
+
+@enduml
